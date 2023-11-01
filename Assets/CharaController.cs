@@ -14,6 +14,7 @@ public class CharaController : MonoBehaviour
 
     private float jumpCount = 0;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +56,21 @@ public class CharaController : MonoBehaviour
         if (collision.gameObject.tag == "EarthTag")
         {
             jumpCount = 0;
+        }
+
+        if(collision.gameObject.tag == "SawTag")
+        {
+            GameObject.Find("Canvas").GetComponent<UIController>().GameOver();
+
+            this.gameObject.SetActive(false);
+           
+            
+        }
+        
+        if(collision.gameObject.tag == "GoalTag")
+        {
+            GameObject.Find("Canvas").GetComponent<UIController>().Clear();
+            this.gameObject.SetActive(false);
         }
     }
 

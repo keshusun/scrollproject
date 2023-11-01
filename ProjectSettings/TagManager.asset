@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - EarthTag
+  - SawTag
+  - GoalTag
   layers:
   - Default
   - TransparentFX
